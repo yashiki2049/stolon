@@ -7,6 +7,7 @@
     height: 100px;
     display: flex;
     align-items: center;
+    font-size: 15px;
 }
 
 .header-contents {
@@ -25,8 +26,8 @@
 
 .header-menu li {
     border-radius: 25px;
-    height: 41px;
-    width: 150px;
+    height: 2.7em;
+    width: 10em;
     background-color: #F4CD4E;
     margin-left: 20px;
     display: block;
@@ -44,7 +45,7 @@
 }
 
 .stolon-logo {
-    width: 180px;
+    width: 12em;
 }
 
 .login {
