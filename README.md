@@ -13,10 +13,10 @@
 
 ### Association
 
-- has_many :diaries
+- has_many :records
 - has_many :photos
 - has_many :photo_likes
-- has_many :diary_likes
+- has_many :record_likes
 
 ## photos テーブル （投稿写真を管理）
 
@@ -31,7 +31,7 @@
 - has_one :photo_likes
 - has_one :post_tags
 
-## diaries テーブル (育成記録概要を管理)
+## records テーブル (育成記録概要を管理)
 
 | Column        | Type       | Options     |
 | ------------- | ---------- | ----------  |
@@ -43,10 +43,10 @@
 ### Association
 
 - belongs_to :user
-- has_one :diary_likes
+- has_one :record_likes
 - has_one :post_tags
 
-## diary_contents テーブル (育成記録を管理)
+## record_contents テーブル (育成記録を管理)
 
 | Column             | Type       | Options     |
 | ------------------ | ---------- | ----------- |
@@ -56,7 +56,7 @@
 
 ### Association
 
-- belongs_to :diary
+- belongs_to :record
 
 ## tags テーブル (タグを管理)
 
@@ -73,12 +73,12 @@
 | Column             | Type       | Options                       |
 | ------------------ | ---------- | ----------------------------- |
 | photo              | references | null: false, foreign_key: tru |
-| diary              | references | null: false, foreign_key: tru |
+| record              | references | null: false, foreign_key: tru |
 
 ### Association
 
 - belongs_to :photo
-- belongs_to :diary
+- belongs_to :record
 - has_one :tags
 
 ## photo_likes テーブル (写真のいいねを管理)
@@ -93,14 +93,14 @@
 - belongs_to :user
 - belongs_to :photo
 
-## diary_likes テーブル (育成記録のいいねを管理)
+## record_likes テーブル (育成記録のいいねを管理)
 
 | Column             | Type       | Options                       |
 | ------------------ | ---------- | ----------------------------- |
 | user               | references | null: false, foreign_key: tru |
-| diary              | references | null: false, foreign_key: tru |
+| record              | references | null: false, foreign_key: tru |
 
 ### Association
 
 - belongs_to :user
-- belongs_to :diary
+- belongs_to :record
