@@ -1,138 +1,40 @@
 <section class="post">
   <div class="photo-posts">
   
-    <div class="photo-post-card">
-      <%= link_to image_tag("test_pic9.jpg", class:"photo-image"), "/" %>
+    <div class="photo-post-card"><%# ---- 写真投稿ここから ---- %>
+
+      <%= link_to image_tag("test_pic9.jpg", class:"photo-image"), "/" %><%# 投稿画像を表示 %>
       <div class="photo-info">
-        <span class="like">
+        <span class="like"><%# いいね機能 %>
           <%# ライクボタン押してない時 %>
           <%# <span class="fa fa-heart like-btn-unlike"></span> %>
           <%# ライクボタン押した時で分岐 %>
           <span class="fa fa-heart like-btn"></span>
-          <span class="like-sum">3</span>
+          <span class="like-sum">3</span><%# いいね合計数 %>
         </span>
         <span class="name">
           <a href="/">
-            <span>さくら</span>
+            <span>さくら</span><%# 投稿者名表示 %>
             <%#= tweet.user.nickname %>
           </a>
-          <span class="post-date">2020/12/12</span>
+          <span class="post-date">2020/12/12</span><%# 投稿日付表示 %>
         </span>
       </div>
     </div>
 
-    <div class="photo-post-card">
-      <%= link_to image_tag("test_pic2.jpg", class:"photo-image"), "/" %>
-      <div class="photo-info">
-        <span class="like">
-          <%# ライクボタン押してない時 %>
-          <%# <span class="fa fa-heart like-btn-unlike"></span> %>
-          <%# ライクボタン押した時で分岐 %>
-          <span class="fa fa-heart like-btn"></span>
-          <span class="like-sum">25</span>
-        </span>
-        <span class="name">
-          <a href="/">
-            <span>himiko</span>
-            <%#= tweet.user.nickname %>
-          </a>
-          <span class="post-date">2020/12/12</span>
-        </span>
-      </div>
-    </div>
+  </div><%# ---- 写真投稿ここまで ---- %>
 
-    <div class="photo-post-card">
-      <%= link_to image_tag("test_pic5.jpg", class:"photo-image"), "/" %>
-      <div class="photo-info">
-        <span class="like">
-          <%# ライクボタン押してない時 %>
-          <%# <span class="fa fa-heart like-btn-unlike"></span> %>
-          <%# ライクボタン押した時で分岐 %>
-          <span class="fa fa-heart like-btn"></span>
-          <span class="like-sum">10</span>
-        </span>
-        <span class="name">
-          <a href="/">
-            <span>マイ</span>
-            <%#= tweet.user.nickname %>
-          </a>
-          <span class="post-date">2020/12/12</span>
-        </span>
-      </div>
-    </div>
-
-        <div class="photo-post-card">
-      <%= link_to image_tag("test_img6.jpg", class:"photo-image"), "/" %>
-      <div class="photo-info">
-        <span class="like">
-          <%# ライクボタン押してない時 %>
-          <%# <span class="fa fa-heart like-btn-unlike"></span> %>
-          <%# ライクボタン押した時で分岐 %>
-          <span class="fa fa-heart like-btn"></span>
-          <span class="like-sum">12</span>
-        </span>
-        <span class="name">
-          <a href="/">
-            <span>F.M</span>
-            <%#= tweet.user.nickname %>
-          </a>
-          <span class="post-date">2020/12/12</span>
-        </span>
-      </div>
-    </div>
-
-        <div class="photo-post-card">
-      <%= link_to image_tag("test_img3.jpg", class:"photo-image"), "/" %>
-      <div class="photo-info">
-        <span class="like">
-          <%# ライクボタン押してない時 %>
-          <%# <span class="fa fa-heart like-btn-unlike"></span> %>
-          <%# ライクボタン押した時で分岐 %>
-          <span class="fa fa-heart like-btn"></span>
-          <span class="like-sum">6</span>
-        </span>
-        <span class="name">
-          <a href="/">
-            <span>のぶ</span>
-            <%#= tweet.user.nickname %>
-          </a>
-          <span class="post-date">2020/12/12</span>
-        </span>
-      </div>
-    </div>
-
-        <div class="photo-post-card">
-      <%= link_to image_tag("test_img4.jpg", class:"photo-image"), "/" %>
-      <div class="photo-info">
-        <span class="like">
-          <%# ライクボタン押してない時 %>
-          <%# <span class="fa fa-heart like-btn-unlike"></span> %>
-          <%# ライクボタン押した時で分岐 %>
-          <span class="fa fa-heart like-btn"></span>
-          <span class="like-sum">12</span>
-        </span>
-        <span class="name">
-          <a href="/">
-            <span>ふらわー</span>
-            <%#= tweet.user.nickname %>
-          </a>
-          <span class="post-date">2020/12/12</span>
-        </span>
-      </div>
-    </div>
-
-  </div>
-  <div class="record-posts">
+  <div class="record-posts"><%# ---- 育成記録ここから ---- %>
 
     <div class="record-post-card">
-      <%= link_to image_tag("test_img1.jpg", class:"record-image"), "/" %>
+      <%= link_to image_tag("test_img1.jpg", class:"record-image"), "/" %><%# 投稿画像を表示 %>
           <div class="record-info">
             <div class="record-title">
-            <i class="fas fa-calendar-check"></i>ラナンキュラスを育てます
+            <i class="fas fa-calendar-check"></i>ラナンキュラスを育てます<%# 投稿タイトルを表示 %>
           </div>
           <div class="record-text">
-            <p class="record-start-date">育成開始日：2020年9月16日</p>
-            去年のランキュラスが芽を出したので観察を始めようと思います！
+            <p class="record-start-date">育成開始日：2020年9月16日</p><%# 投稿育成開始日を表示 %>
+            去年のランキュラスが芽を出したので観察を始めようと思います！<%# 投稿コメントを表示 %>
           </div>
           <div class="record-like">
             <span class="like">
@@ -143,96 +45,14 @@
             <span class="like-sum">25</span>
             </span>
             <span class="name">
-              <a href="/"><span>みか</span><%#= tweet.user.nickname %></a>
-              <span class="post-date">2020/09/20</span>
+              <a href="/"><span>みか</span><%#= tweet.user.nickname %></a><%# 投稿名を表示 %>
+              <span class="post-date">2020/09/20</span><%# 投稿日を表示 %>
             </span>
           </div>
         </div>
     </div>
 
-  
-    <div class="record-post-card">
-      <%= link_to image_tag("test_img2.jpg", class:"record-image"), "/" %>
-          <div class="record-info">
-            <div class="record-title">
-            <i class="fas fa-calendar-check"></i>クレマチス育成日記
-          </div>
-          <div class="record-text">
-            <p class="record-start-date">育成開始日：2020年04月10日</p>
-            いただいたクレマチスの挿木を植え替えたので育てます。
-          </div>
-          <div class="record-like">
-            <span class="like">
-            <%# ライクボタン押してない時 %>
-            <%# <span class="fa fa-heart like-btn-unlike"></span> %>
-            <%# ライクボタン押した時で分岐 %>
-            <span class="fa fa-heart like-btn"></span>
-            <span class="like-sum">25</span>
-            </span>
-            <span class="name">
-              <a href="/"><span>マイ</span><%#= tweet.user.nickname %></a>
-              <span class="post-date">2020/12/12</span>
-            </span>
-          </div>
-        </div>
-    </div>
-
-  
-    <div class="record-post-card">
-      <%= link_to image_tag("test_img5.jpg", class:"record-image"), "/" %>
-          <div class="record-info">
-            <div class="record-title">
-            <i class="fas fa-calendar-check"></i>ダリア育成日記
-          </div>
-          <div class="record-text">
-            <p class="record-start-date">育成開始日：2020年08月02日</p>
-            冬越しを目指して観察していきます
-          </div>
-          <div class="record-like">
-            <span class="like">
-            <%# ライクボタン押してない時 %>
-            <%# <span class="fa fa-heart like-btn-unlike"></span> %>
-            <%# ライクボタン押した時で分岐 %>
-            <span class="fa fa-heart like-btn"></span>
-            <span class="like-sum">25</span>
-            </span>
-            <span class="name">
-              <a href="/"><span>マイ</span><%#= tweet.user.nickname %></a>
-              <span class="post-date">2020/12/12</span>
-            </span>
-          </div>
-        </div>
-    </div>
-
-  
-    <div class="record-post-card">
-      <%= link_to image_tag("test_img7.JPG", class:"record-image"), "/" %>
-          <div class="record-info">
-            <div class="record-title">
-            <i class="fas fa-calendar-check"></i>ジンチョウゲの挿し木
-          </div>
-          <div class="record-text">
-            <p class="record-start-date">育成開始日：2020年02月16日</p>
-            挿し木観察2年目です。来年も咲かせられるように頑張ります。
-          </div>
-          <div class="record-like">
-            <span class="like">
-            <%# ライクボタン押してない時 %>
-            <%# <span class="fa fa-heart like-btn-unlike"></span> %>
-            <%# ライクボタン押した時で分岐 %>
-            <span class="fa fa-heart like-btn"></span>
-            <span class="like-sum">25</span>
-            </span>
-            <span class="name">
-              <a href="/"><span>マイ</span><%#= tweet.user.nickname %></a>
-              <span class="post-date">2020/12/12</span>
-            </span>
-          </div>
-        </div>
-    </div>
-
-
-  </div>
+  </div><%# ---- 育成記録ここまで ---- %>
   
   
 </section>
