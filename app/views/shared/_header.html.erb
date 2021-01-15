@@ -2,8 +2,14 @@
   <div class="header-contents">
       <%= link_to image_tag("stolon_logo.png", class:"stolon-logo"), "/" %>
       <ul class="header-menu">
-      <li><a href="" class="login">ログイン</a></li>
-      <li><a href="" class="sgin-up">新規登録</a></li>
+      <% if user_signed_in? %>
+      <%= current_user.name %> さん
+        <li><%= link_to 'マイページ', "#", class: "user-nickname" %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+      <% else %>
+        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
       </ul>
   </div>
 </header>

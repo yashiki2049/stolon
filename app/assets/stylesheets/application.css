@@ -14,6 +14,7 @@
  *= require_self
  */
 
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700&display=swap');
 * {
     box-sizing: border-box;
     color: #333;
@@ -39,4 +40,145 @@ html {
     max-width: 1180px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.field_with_errors {
+    display: contents
+}
+
+h2 {
+    margin: 1em;
+    color: #009D4C;
+    font-size: 2em;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+input:focus {
+    outline: 0;
+}
+
+.error-message {
+    width: 27em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.error-message p {
+    font-size: 1em;
+}
+
+.sub-btn {
+    color: #019f4c;
+}
+
+.check-btm {
+    color: #dc143c;
+}
+
+.form-wrap {
+    background-color: #fff;
+    max-width: 900px;
+    border-radius: 15px;
+    border: solid 1px #009D4C;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3em;
+}
+
+.form-wrapper {
+    background-image: url('shared/back-image.gif');
+    background-repeat: repeat-x;
+    padding-top: 90px;
+}
+
+.field {
+    margin: 1.5em 0;
+    width: 35em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-wrap ul {
+    display: flex;
+}
+
+.form-wrap li {
+    margin-left: 1em;
+    text-align: end;
+}
+
+.input-default {
+    width: 20em;
+    margin-top: 5px;
+    height: 48px;
+    padding: 10px 16px 8px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 16px;
+    resize: none;
+}
+
+.input-label {
+    width: 11em;
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+.input-label li {
+    width: 10em;
+    font-weight: bold;
+    outline: none;
+}
+
+.indispensable {
+    background-color: #dc143c;
+    color: #fff;
+    padding: 0.3em;
+    border-radius: 4px;
+    font-size: 0.9em
+}
+
+.arbitrary {
+    background-color: #009D4C;
+    color: #fff;
+    padding: 0.3em;
+    border-radius: 4px;
+    font-size: 0.9em
+}
+
+.text-default {
+    width: 20em;
+    margin-top: 5px;
+    height: 8em;
+    padding: 10px 16px 8px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 16px;
+    resize: none;
+}
+
+.radio {
+    line-height: 3.3em;
+}
+
+.register-btn {
+    width: 15em;
+    background-color: #009e4c;
+    transition: .4s;
+    border: 0;
+    border-radius: 30px;
+    color: #fff;
+    line-height: 56px;
+    font-size: 1.2em;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    cursor: pointer;
+    outline: none;
+    margin: 0.5em 0 2em 0;
+}
+
+.register-btn:hover {
+    background-color: #02ad53;
 }
