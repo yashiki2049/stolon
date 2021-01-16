@@ -46,6 +46,12 @@
     font-size: 20px;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.top-intro a:hover {
+    background-color: #fad764;
 }
 
 
