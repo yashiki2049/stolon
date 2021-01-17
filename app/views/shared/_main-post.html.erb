@@ -1,0 +1,58 @@
+<section class="post">
+  <div class="photo-posts">
+  
+    <div class="photo-post-card"><%# ---- 写真投稿ここから ---- %>
+
+      <%= link_to image_tag("test_pic9.jpg", class:"photo-image"), "/" %><%# 投稿画像を表示 %>
+      <div class="photo-info">
+        <span class="like"><%# いいね機能 %>
+          <%# ライクボタン押してない時 %>
+          <%# <span class="fa fa-heart like-btn-unlike"></span> %>
+          <%# ライクボタン押した時で分岐 %>
+          <span class="fa fa-heart like-btn"></span>
+          <span class="like-sum">35</span><%# いいね合計数 %>
+        </span>
+        <span class="name">
+          <a href="/">
+            <span>さくらこうたろう</span><%# 投稿者名表示 %>
+            <%#= tweet.user.nickname %>
+          </a>
+          <span class="post-date">2020/12/12</span><%# 投稿日付表示 %>
+        </span>
+      </div>
+    </div>
+
+  </div><%# ---- 写真投稿ここまで ---- %>
+
+  <div class="record-posts"><%# ---- 育成記録ここから ---- %>
+
+    <div class="record-post-card">
+      <%= link_to image_tag("test_img1.jpg", class:"record-image"), "/" %><%# 投稿画像を表示 %>
+          <div class="record-info">
+            <div class="record-title">
+            <i class="fas fa-calendar-check"></i>ラナンキュラスを育てます<%# 投稿タイトルを表示 %>
+          </div>
+          <div class="record-text">
+            <p class="record-start-date">育成開始日：2020年9月16日</p><%# 投稿育成開始日を表示 %>
+            去年のランキュラスが芽を出したので観察を始めようと思います！<%# 投稿コメントを表示 %>
+          </div>
+          <div class="record-like">
+            <span class="like">
+            <%# ライクボタン押してない時 %>
+            <%# <span class="fa fa-heart like-btn-unlike"></span> %>
+            <%# ライクボタン押した時で分岐 %>
+            <span class="fa fa-heart like-btn"></span>
+            <span class="like-sum">25</span>
+            </span>
+            <span class="name">
+              <a href="/"><span>みか</span><%#= tweet.user.nickname %></a><%# 投稿名を表示 %>
+              <span class="post-date">2020/09/20</span><%# 投稿日を表示 %>
+            </span>
+          </div>
+        </div>
+    </div>
+
+  </div><%# ---- 育成記録ここまで ---- %>
+  
+  
+</section>

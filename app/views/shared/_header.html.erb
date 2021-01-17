@@ -1,0 +1,15 @@
+<header class='top-header'>
+  <div class="header-contents">
+      <%= link_to image_tag("stolon_logo.png", class:"stolon-logo"), "/" %>
+      <ul class="header-menu">
+      <% if user_signed_in? %>
+      <%= current_user.name %> さん
+        <li class="btn-yellow"><%= link_to 'マイページ', "#", class: "user-nickname" %></li>
+        <li class="btn-yellow"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+      <% else %>
+        <li class="btn-yellow"><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+        <li class="btn-yellow"><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
+      </ul>
+  </div>
+</header>
