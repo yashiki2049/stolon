@@ -182,3 +182,52 @@ input:focus {
 .register-btn:hover {
     background-color: #05bb5a;
 }
+
+
+/*** いいね ***/
+
+.like {
+    width: 3em;
+    height: 100%;
+    display: block;
+}
+
+.like-btn {
+    color: #e60033;
+    font-size: 1em;
+    /* padding-left: 0.3em; */
+    /* vertical-align: middle; */
+}
+
+.like-sum {
+    /* border-radius: 0.2em; */
+    color: #e60033;
+    font-size: 0.8em;
+    /* vertical-align: initial; */
+    font-weight: bold;
+}
+
+
+/*** 投稿者名 ***/
+
+.name {
+    width: 90%;
+    height: 100%;
+    display: block;
+    text-align: end;
+    font-size: 0.8em;
+}
+
+.name a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/*** 投稿日 ***/
+
+.post-date {
+    color: #a9a9a9;
+    font-size: 0.9em;
+}

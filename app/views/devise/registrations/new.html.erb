@@ -10,7 +10,7 @@
   <div class="field">
   <ul>
     <li class="input-label"><%= f.label :ニックネーム %> <span class="indispensable">必須</span></li>
-    <li><%= f.text_field :name, placeholder:"", class: "input-default" %></li>
+    <li><%= f.text_field :name, placeholder:"全角半角８文字以内", class: "input-default" %></li>
   </ul>
   </div>
 
@@ -25,14 +25,14 @@
   <div class="field">
     <ul>
       <li class="input-label"><%= f.label :パスワード %> <span class="indispensable">必須</span></li>
-      <li><%= f.password_field :password, placeholder:"英字6文字以上", autocomplete: "new-password", class: "input-default"  %></li>
+      <li><%= f.password_field :password, placeholder:"半角英数混合6文字以上", autocomplete: "new-password", class: "input-default"  %></li>
      </ul>
   </div>
 
   <div class="field">
     <ul>
       <li class="input-label"><%= f.label :パスワード再入力 %> <span class="indispensable">必須</span></li>
-      <li><%= f.password_field :password_confirmation, placeholder:"英字6文字以上" , autocomplete: "new-password", class: "input-default" %></li>
+      <li><%= f.password_field :password_confirmation, placeholder:"半角英数混合6文字以上" , autocomplete: "new-password", class: "input-default" %></li>
     </ul>
   </div>
   
