@@ -1,0 +1,31 @@
+<%= render "shared/header" %>
+<div class="form-wrapper">
+  <div class="form-wrap">
+<%= form_with model: @Photo, local: true do |f| %>
+  <div class="field">
+    <%= f.label :title, "写真タイトル" %><br />
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "写真" %>
+    <%= f.file_field :image %>
+  </div>
+
+    <div class="field">
+    <%= collection_check_boxes(:photo, :tag_ids, Tag.all, :id, :name) do |tag| %>
+        <%= tag.label do %>
+            <%= tag.check_box %>
+            <%= tag.text %>
+        <% end %>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :text, "説明文" %><br />
+    <%= f.text_area :text, class: :form__text %>
+  </div>
+    <%= f.submit %>
+    <% end %>
+  </div>
+</div>
