@@ -30,12 +30,13 @@
     width: 10em;
     background-color: #F4CD4E;
     margin-left: 20px;
-    display: block;
     text-align: center;
     line-height: 40px;
     font-weight: bold;
     cursor: pointer;
     transition: .4s;
+    border: 1px solid #F4CD4E;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .btn-yellow:hover {

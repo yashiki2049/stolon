@@ -37,6 +37,8 @@
     border-radius: 50px;
     height: 3em;
     width: 15em;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-decoration: none;
     background-color: #F4CD4E;
     margin-left: 20px;
     display: block;
@@ -96,14 +98,20 @@
     box-shadow: 0 0.3em 0.5em 0 rgb(96 125 139 / 13%);
 }
 
-.photo-image {
+.photo-box {
+    background-color: #e6e6e6;
     width: 15em;
     height: 15em;
-    background-color: burlywood;
+    overflow: hidden;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0.7em;
-    display: block;
+    margin-top: 0.9em;
+}
+
+.photo-box img {
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
 }
 
 .photo-info {

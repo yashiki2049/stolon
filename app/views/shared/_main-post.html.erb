@@ -1,9 +1,10 @@
 <section class="post">
   <div class="photo-posts">
-  
+<% @photos.each do |photo| %>
     <div class="photo-post-card"><%# ---- 写真投稿ここから ---- %>
-
-      <%= link_to image_tag("test_pic9.jpg", class:"photo-image"), "/" %><%# 投稿画像を表示 %>
+      <div class="photo-box">
+      <%= link_to image_tag(photo.image, class:"photo-image"), "/" %><%# 投稿画像を表示 %>
+      </div>
       <div class="photo-info">
         <span class="like"><%# いいね機能 %>
           <%# ライクボタン押してない時 %>
@@ -14,14 +15,14 @@
         </span>
         <span class="name">
           <a href="/">
-            <span>さくらこうたろう</span><%# 投稿者名表示 %>
+            <span><%= photo.user.name %></span><%# 投稿者名表示 %>
             <%#= tweet.user.nickname %>
           </a>
-          <span class="post-date">2020/12/12</span><%# 投稿日付表示 %>
+          <span class="post-date"><%= photo.created_at.strftime("%Y/%m/%d") %></span><%# 投稿日付表示 %>
         </span>
       </div>
     </div>
-
+    <% end %>
   </div><%# ---- 写真投稿ここまで ---- %>
 
   <div class="record-posts"><%# ---- 育成記録ここから ---- %>
