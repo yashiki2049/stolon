@@ -20,6 +20,10 @@
     color: #333;
 }
 
+*:focus {
+    outline: none;
+}
+
 article,
 footer,
 header,
