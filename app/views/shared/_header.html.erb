@@ -4,7 +4,8 @@
       <ul class="header-menu">
       <% if user_signed_in? %>
       <%= current_user.name %> さん
-        <li class="btn-yellow"><%= link_to 'マイページ', "#", class: "user-nickname" %></li>
+        <li class="btn-yellow"><%= link_to 'マイページ', "#", class: "user-name" %></li>
+        <li class="btn-yellow"><%= link_to '写真投稿', new_photo_path %></li>
         <li class="btn-yellow"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
       <% else %>
         <li class="btn-yellow"><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>

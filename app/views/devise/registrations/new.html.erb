@@ -1,71 +1,69 @@
 <%= render "shared/header" %>
 <div class="form-wrapper">
+  <div class="form-wrap">
+  <h2>新規登録</h2>
 
-<div class="form-wrap">
-<h2>新規登録</h2>
+  <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
+    <span ><%= render "devise/shared/error_messages", resource: resource %>
 
-<%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
-  <span ><%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-  <ul>
-    <li class="input-label"><%= f.label :ニックネーム %> <span class="indispensable">必須</span></li>
-    <li><%= f.text_field :name, placeholder:"全角半角８文字以内", class: "input-default" %></li>
-  </ul>
-  </div>
-
-
-  <div class="field">
+    <div class="field">
     <ul>
-      <li class="input-label"><%= f.label :メールアドレス %> <span class="indispensable">必須</span></li>
-      <li><%= f.email_field :email, placeholder:"storon@mail", autofocus: true, autocomplete: "email" , class: "input-default" %></li>
+      <li class="input-label"><%= f.label :ニックネーム %> <span class="indispensable">必須</span></li>
+      <li><%= f.text_field :name, placeholder:"全角半角８文字以内", class: "input-default" %></li>
     </ul>
-  </div>
+    </div>
 
-  <div class="field">
-    <ul>
-      <li class="input-label"><%= f.label :パスワード %> <span class="indispensable">必須</span></li>
-      <li><%= f.password_field :password, placeholder:"半角英数混合6文字以上", autocomplete: "new-password", class: "input-default"  %></li>
-     </ul>
-  </div>
 
-  <div class="field">
-    <ul>
-      <li class="input-label"><%= f.label :パスワード再入力 %> <span class="indispensable">必須</span></li>
-      <li><%= f.password_field :password_confirmation, placeholder:"半角英数混合6文字以上" , autocomplete: "new-password", class: "input-default" %></li>
-    </ul>
-  </div>
-  
-  <div class="field">
-    <ul>
-      <li class="input-label"><%= f.label :都道府県 %> <span class="arbitrary">任意</span></li>
-      <li><%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class: "input-default"}) %></li>
-     </ul>
-  </div>
+    <div class="field">
+      <ul>
+        <li class="input-label"><%= f.label :メールアドレス %> <span class="indispensable">必須</span></li>
+        <li><%= f.email_field :email, placeholder:"storon@mail", autofocus: true, autocomplete: "email" , class: "input-default" %></li>
+      </ul>
+    </div>
 
-  <div class="field">
-    <ul>
-      <li class="input-label"><%= f.label :性別 %> <span class="indispensable">必須</span></li>
-    <li class="radio"><label><%= f.radio_button :gender, :male %>男性</label></li>
-    <li class="radio"><label><%= f.radio_button :gender, :female %>女性</label></li>
-    <li class="radio"><label><%= f.radio_button :gender, :other %>その他</label></li>
-    <li class="radio"><label><%= f.radio_button :gender, :na %>無回答</label></li>
-     </ul>
-  </div>
+    <div class="field">
+      <ul>
+        <li class="input-label"><%= f.label :パスワード %> <span class="indispensable">必須</span></li>
+        <li><%= f.password_field :password, placeholder:"半角英数混合6文字以上", autocomplete: "new-password", class: "input-default"  %></li>
+      </ul>
+    </div>
 
-  <div class="field">
-    <ul>
-    <li class="input-label"><%= f.label :自己紹介 %> <span class="indispensable">必須</span></li>
-    <li><%= f.text_area :text, placeholder:"好きな植物、園芸の楽しみ方 etc (全角半角100文字以内)", autofocus: true, autocomplete: "text" , class: "text-default" %></li>
-    </ul></li>
-     </ul>
-  </div>
+    <div class="field">
+      <ul>
+        <li class="input-label"><%= f.label :パスワード再入力 %> <span class="indispensable">必須</span></li>
+        <li><%= f.password_field :password_confirmation, placeholder:"半角英数混合6文字以上" , autocomplete: "new-password", class: "input-default" %></li>
+      </ul>
+    </div>
+    
+    <div class="field">
+      <ul>
+        <li class="input-label"><%= f.label :都道府県 %> <span class="arbitrary">任意</span></li>
+        <li><%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class: "input-default"}) %></li>
+      </ul>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "登録する" ,class:"register-btn" %>
-  </div>
-<% end %>
+    <div class="field">
+      <ul>
+        <li class="input-label"><%= f.label :性別 %> <span class="indispensable">必須</span></li>
+      <li class="radio"><label><%= f.radio_button :gender, :male %>男性</label></li>
+      <li class="radio"><label><%= f.radio_button :gender, :female %>女性</label></li>
+      <li class="radio"><label><%= f.radio_button :gender, :other %>その他</label></li>
+      <li class="radio"><label><%= f.radio_button :gender, :na %>無回答</label></li>
+      </ul>
+    </div>
 
-<%= render "devise/shared/links" %>
-</div>
+    <div class="field">
+      <ul>
+      <li class="input-label"><%= f.label :自己紹介 %> <span class="indispensable">必須</span></li>
+      <li><%= f.text_area :text, placeholder:"好きな植物、園芸の楽しみ方 etc (全角半角100文字以内)", autofocus: true, autocomplete: "text" , class: "text-default" %></li>
+      </ul>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "登録する" ,class:"register-btn" %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+  </div>
 </div>

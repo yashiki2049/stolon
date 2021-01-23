@@ -22,8 +22,8 @@
 
 | Column             | Type       | Options     |
 | ------------------ | ---------- | ----------- |
+| title              | string     | null: false |
 | text               | text       | null: false |
-| media_id           | integer    | null: false |
 
 ### Association
 
@@ -73,7 +73,7 @@
 | Column             | Type       | Options                       |
 | ------------------ | ---------- | ----------------------------- |
 | photo              | references | null: false, foreign_key: tru |
-| record              | references | null: false, foreign_key: tru |
+| record             | references | null: false, foreign_key: tru |
 
 ### Association
 

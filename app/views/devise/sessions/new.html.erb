@@ -1,31 +1,31 @@
 <%= render "shared/header" %>
 <div class="form-wrapper">
+  <div class="form-wrap">
 
-<div class="form-wrap">
+  <h2>ログイン</h2>
 
-<h2>ログイン</h2>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <span ><%= render "devise/shared/error_messages", resource: resource %>
+    <div class="field">
+    <ul>
+      <li class="input-label"><%= f.label :email %> <span class="indispensable">必須</span></li>
+      <li><%= f.email_field :email, autofocus: true, autocomplete: "email" , class: "input-default" %></li>
+    </ul>
+    </div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <span ><%= render "devise/shared/error_messages", resource: resource %>
-  <div class="field">
-  <ul>
-    <li class="input-label"><%= f.label :email %> <span class="indispensable">必須</span></li>
-    <li><%= f.email_field :email, autofocus: true, autocomplete: "email" , class: "input-default" %></li>
-  </ul>
+    <div class="field">
+    <ul>
+      <li class="input-label"><%= f.label :password %> <span class="indispensable">必須</span></li>
+      <li><%= f.password_field :password, autocomplete: "current-password" , class: "input-default" %></li>
+    </ul>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "ログイン",class:"register-btn" %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+  
   </div>
-
-  <div class="field">
-  <ul>
-    <li class="input-label"><%= f.label :password %> <span class="indispensable">必須</span></li>
-    <li><%= f.password_field :password, autocomplete: "current-password" , class: "input-default" %></li>
-  </ul>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "ログイン",class:"register-btn" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
-</div>
 </div>

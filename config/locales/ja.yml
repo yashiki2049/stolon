@@ -17,6 +17,11 @@ ja:
         email: メールアドレス
         password: パスワード
         password_confirmation: 確認用パスワード
+      photo:
+        title: 写真のタイトル
+        text: 説明文
+        image: 画像
+        tag_ids: タグ
   date:
     abbr_day_names:
     - 日

@@ -1,0 +1,51 @@
+<%= render "shared/header" %>
+<div class="form-wrapper">
+  <div class="post-wrap">
+  <h2>写真投稿</h2>
+
+  <%= form_with model: @Photo, local: true do |f| %>
+  <%= render 'shared/error_messages', model: f.object %>
+<span >
+    <div class="post-field">
+    <ul class="post-form">
+      <li class="photo-left"><%= f.label :title, "写真タイトル" %> <span class="indispensable">必須</span></li>
+      <li class="photo-right"><%= f.text_field :title, placeholder:"タイトル", class: "photo-input"%></li>
+    </ul>
+    </div>
+
+    <div class="post-field">
+    <ul class="post-form">
+      <li class="photo-left">写真 <span class="indispensable">必須</span></li>
+      <li class="photo-right"><%= f.label :image, "写真をアップロード" , class: "image_input_btn"%></li>
+      <li><%= f.file_field :image , class: "image_form"%></li>
+    </ul>
+    <div id="photo-post-img"></div>
+    </div>
+
+    <div class="post-field">
+    <ul>
+      <li class="photo-left"><%= f.label :タグの選択 %>  <span class="indispensable">必須</span></li>
+      <li class="photo-right"><%= collection_check_boxes(:photo, :tag_ids, Tag.all, :id, :name , class: "post-checkbox") do |tag| %>
+          <%= tag.label do %>
+              <%= tag.check_box %>
+              <%= tag.text %><br>
+          <% end %>
+      <% end %></li>
+      </ul>
+    </div>
+
+    <div class="post-field">
+    <ul>
+      <li class="photo-left"><%= f.label :text, "説明文" %> <span class="indispensable">必須</span></li>
+      <li class="photo-right"><%= f.text_area :text, placeholder:"好きな植物、園芸の楽しみ方 etc (全角半角100文字以内)", autofocus: true, autocomplete: "text" , class: "post-default" %></li>
+    </ul>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "投稿する",class:"btn-yellow" %>
+    </div>
+      <% end %>
+      <%# <%= image_tag @Photo.image.variant(resize: '500x500'), class: 'photo-image' if @Photo.image.attached? %>
+
+  </div>
+</div>
