@@ -1,0 +1,96 @@
+.post-wrap {
+    background-color: #fff;
+    max-width: 900px;
+    border-radius: 15px;
+    border: solid 1px #009D4C;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3em;
+}
+
+.post-wrap ul {
+    display: flex;
+    width: 46em;
+}
+
+.post-wrap li {
+    margin-left: 1em;
+}
+
+.post-field {
+    margin: 1.5em 0;
+    width: 35em;
+    margin-left: 4.5em;
+    margin-right: auto;
+}
+
+#photo-post-img img {
+    width: 10em;
+    height: 10em;
+    background: #e6e6e6;
+    object-fit: contain;
+    margin-top: 1em;
+    margin-left: -2.2em;
+    margin-bottom: -0.9em;
+}
+
+.image_input_btn {
+    display: block;
+    background-color: #ececec;
+    border: 1px solid #909090;
+    width: 180px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    padding-top: 2px;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.image_input_btn:hover {
+    background-color: #dcdcdc;
+}
+
+.image_form {
+    display: none;
+}
+
+.photo-input {
+    width: 100%;
+    margin-top: 5px;
+    height: 48px;
+    padding: 10px 16px 8px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 16px;
+    resize: none;
+}
+
+.photo-left {
+    width: 12em;
+    margin-top: 1em;
+    font-weight: bold;
+    text-align: end;
+}
+
+.photo-right {
+    width: 100%;
+    text-align: left;
+}
+
+.post-default {
+    width: 100%;
+    margin-top: 5px;
+    height: 7em;
+    padding: 10px 16px 8px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 16px;
+    resize: none;
+}
