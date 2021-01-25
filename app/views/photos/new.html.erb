@@ -3,13 +3,13 @@
   <div class="post-wrap">
   <h2>写真投稿</h2>
 
-  <%= form_with model: @Photo, local: true do |f| %>
+  <%= form_with model: @photo, local: true do |f| %>
   <%= render 'shared/error_messages', model: f.object %>
 <span >
     <div class="post-field">
     <ul class="post-form">
       <li class="photo-left"><%= f.label :title, "写真タイトル" %> <span class="indispensable">必須</span></li>
-      <li class="photo-right"><%= f.text_field :title, placeholder:"タイトル", class: "photo-input"%></li>
+      <li class="photo-right"><%= f.text_field :title, placeholder:"タイトル", class: "photo-input" %></li>
     </ul>
     </div>
 
@@ -24,13 +24,9 @@
 
     <div class="post-field">
     <ul>
-      <li class="photo-left"><%= f.label :タグの選択 %>  <span class="indispensable">必須</span></li>
-      <li class="photo-right"><%= collection_check_boxes(:photo, :tag_ids, Tag.all, :id, :name , class: "post-checkbox") do |tag| %>
-          <%= tag.label do %>
-              <%= tag.check_box %>
-              <%= tag.text %><br>
-          <% end %>
-      <% end %></li>
+      <li class="photo-left"><%= f.label :タグ %>  <span class="indispensable">必須</span></li>
+      <li class="photo-right"><%= f.text_field :tag_name , class: "photo-input" %>
+      <p>半角の空白で区切ることで複数のタグを付けることができます</p></li>
       </ul>
     </div>
 

@@ -21,7 +21,7 @@ ja:
         title: 写真のタイトル
         text: 説明文
         image: 画像
-        tag_ids: タグ
+        tag_name: タグ
   date:
     abbr_day_names:
     - 日
