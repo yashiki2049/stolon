@@ -15,8 +15,9 @@ class PhotosController < ApplicationController
  end
 
  def show
+  
   @photo = Photo.find(params[:id])
-  # @photos = Photo.includes(:user).order('created_at DESC')
+  @photos = Photo.where(params[:id]).order('created_at DESC')
   @photo_tags = @photo.tags
  end
 

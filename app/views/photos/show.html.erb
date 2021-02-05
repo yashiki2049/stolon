@@ -36,15 +36,24 @@
           </p>
       </div>
 
-      <div class="post-show-user">
-        <p><%= image_tag @photo.user.avatar %></p>
-        <p class="post-show-name"><%= @photo.user.name %></p>
-        <p class="post-show-text">
-        <%= safe_join(@photo.user.text.split("\n"), tag(:br)) %>
-      </div>
-      <%# <% @photos.each do |photo| %>
-        <%# <%= photo.image %>
-       <%#<%end%>
 
+<div class="post-show-user">
+        <div class="post-user-info">
+          <p><%= image_tag @photo.user.avatar %></p>
+          <p class="test"><span class="post-user-name"><%= @photo.user.name %></span><br>
+          <span class="post-user-pre"><%= @photo.user.prefecture.name %></span></p>
+        </div>
+        <%# <p class="post-show-text">
+        <%= safe_join(@photo.user.text.split("\n"), tag(:br)) %>
+      </p>
+      <p class="user-other-post">
+      <% @photos.each do |photo| %>
+        <span><%= image_tag photo.image %></span>
+       <%end%>
+      </p>
+       </div>
+
+
+       
   </div>
 </div>

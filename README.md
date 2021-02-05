@@ -8,7 +8,6 @@
 | email              | string  | null: false |
 | encrypted_password | string  | null: false |
 | prefecture_id      | integer |             |
-| gender             | string |             |
 | text               | text    | null: false |
 
 ### Association

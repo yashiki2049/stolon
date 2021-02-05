@@ -273,7 +273,7 @@ input:focus {
 .photo-tags {
     width: 100%;
     height: auto;
-    margin: 0.4em 0.3em 0 0.3em;
+    margin: 0.5em 0.3em 0 0.3em;
     border-radius: 10px;
 }
 
@@ -283,9 +283,10 @@ input:focus {
 }
 
 .tags-btn {
-    margin: 0.4em 0;
+    margin: 0.4em 0.1em;
     color: #009e4c;
-    font-size: 1.2em;
+    font-size: 1.3em;
+    vertical-align: middle;
 }
 
 .tag-name {
@@ -312,7 +313,6 @@ input:focus {
 
 .show-title {
     border-radius: 5px 5px 0 0;
-    margin: 0.3em 0.3em 0 0.3em;
     border: 1px solid #009e4c;
     border-bottom: 1px dotted #009e4c;
     background-color: #f7f7f7;
@@ -328,7 +328,6 @@ input:focus {
     height: auto;
     border: 1px solid #009d4c;
     border-top: none;
-    margin: 0 0.3em 0.3em 0.3em;
     padding: 0.3em;
 }
 
@@ -341,23 +340,26 @@ input:focus {
     border: 1px solid #009d4c;
     border-radius: 5px;
     background-color: #fff;
-    margin-left: 2em;
+    margin-left: 1em;
+    /* border-left: 5px solid #009d4c; */
     display: inline-table;
 }
 
-.post-show-user img {
+.post-user-info img {
     width: 4em;
     height: 4em;
     background-color: aquamarine;
     border-radius: 50%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1.5em;
-    margin-bottom: 1.3em;
+    margin-left: 1em;
+    /* margin-right: auto; */
+    margin-top: 1em;
+    margin-bottom: 1em;
+    object-fit: cover;
 }
 
-.post-show-name {
+
+/* .post-show-name {
     font-weight: bold;
     margin-left: auto;
     margin-right: auto;
@@ -365,7 +367,7 @@ input:focus {
     width: 10em;
     padding-bottom: 1.5em;
     border-bottom: 1px dotted #009e4c;
-}
+} */
 
 .post-show-text {
     margin-left: auto;
@@ -377,4 +379,41 @@ input:focus {
     margin-bottom: 2em;
     color: #333333;
     font-size: 0.9em;
+}
+
+.post-user-info {
+    display: flex;
+    border-bottom: 1px dotted #009d4c;
+}
+
+.post-user-name {
+    font-weight: bold;
+}
+
+.post-user-pre {
+    font-size: 0.8em;
+    color: #989898;
+    /* line-height: inherit; */
+}
+
+.test {
+    margin-top: 1.7em;
+    margin-left: 1em;
+    line-height: 1.2em;
+}
+
+.user-other-post img {
+    width: 4em;
+    height: 4em;
+    display: block;
+    padding-left: 0.45em;
+    padding-bottom: 0.5em;
+    object-fit: cover;
+    box-sizing: content-box;
+}
+
+.user-other-post {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em 0 0.5em 0;
 }
