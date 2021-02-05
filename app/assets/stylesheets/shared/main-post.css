@@ -90,7 +90,7 @@
 
 .photo-post-card {
     width: 16.5em;
-    height: 18.5em;
+    height: auto;
     margin-bottom: 1.3em;
     box-sizing: content-box;
     border-radius: 0.5em;
@@ -116,9 +116,6 @@
 
 .photo-info {
     margin: 0 0.77em;
-    display: flex;
-    padding-top: 0.6em;
-    align-items: center;
 }
 
 @media screen and (min-width:1001px) {
@@ -194,14 +191,12 @@
 
 .record-text {
     height: 100%;
+    margin-top: 0.3em;
 }
 
 .record-start-date {
     color: #009D4C;
     font-weight: bold;
+    font-size: 0.9em;
     padding: 0.2em 0;
-}
-
-.record-like {
-    display: flex;
 }

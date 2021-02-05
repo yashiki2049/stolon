@@ -8,7 +8,6 @@
 | email              | string  | null: false |
 | encrypted_password | string  | null: false |
 | prefecture_id      | integer |             |
-| gender             | string |             |
 | text               | text    | null: false |
 
 ### Association
@@ -62,7 +61,7 @@
 
 | Column             | Type       | Options     |
 | ------------------ | ---------- | ----------- |
-| name               | string     | null: false |
+| tag_name           | string     | null: false |
 
 ### Association
 

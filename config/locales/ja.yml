@@ -17,11 +17,12 @@ ja:
         email: メールアドレス
         password: パスワード
         password_confirmation: 確認用パスワード
+        prefecture_id: 都道府県
       photo:
         title: 写真のタイトル
         text: 説明文
         image: 画像
-        tag_ids: タグ
+        tag_name: タグ
   date:
     abbr_day_names:
     - 日

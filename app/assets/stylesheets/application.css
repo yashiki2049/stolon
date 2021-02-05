@@ -17,6 +17,7 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700&display=swap');
 * {
     box-sizing: border-box;
+    text-decoration: none;
     color: #333;
 }
 
@@ -76,7 +77,7 @@ input:focus {
     color: #019f4c;
 }
 
-.check-btm {
+.check-btn {
     color: #dc143c;
 }
 
@@ -94,7 +95,7 @@ input:focus {
 .form-wrapper {
     background-image: url('shared/back-image.gif');
     background-repeat: repeat-x;
-    padding-top: 90px;
+    padding-top: 6em;
 }
 
 .field {
@@ -199,15 +200,11 @@ input:focus {
 .like-btn {
     color: #e60033;
     font-size: 1em;
-    /* padding-left: 0.3em; */
-    /* vertical-align: middle; */
 }
 
 .like-sum {
-    /* border-radius: 0.2em; */
     color: #e60033;
     font-size: 0.8em;
-    /* vertical-align: initial; */
     font-weight: bold;
 }
 
@@ -215,11 +212,12 @@ input:focus {
 /*** 投稿者名 ***/
 
 .name {
-    width: 90%;
-    height: 100%;
+    width: 100%;
+    height: auto;
     display: block;
     text-align: end;
-    font-size: 0.8em;
+    font-size: 0.9em;
+    margin: 0.5em 0;
 }
 
 .name a {
@@ -234,4 +232,188 @@ input:focus {
 .post-date {
     color: #a9a9a9;
     font-size: 0.9em;
+}
+
+
+/** 詳細 **/
+
+.photo-show {
+    width: 40em;
+}
+
+.show-wrapper {
+    background-image: url('shared/back-image.gif');
+    background-repeat: repeat-x;
+    padding-top: 2em;
+}
+
+.photo-show-wrap {
+    display: flex;
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/** 左側 **/
+
+.photo-show-box {
+    background-color: #000;
+    width: 40em;
+    height: 40em;
+    overflow: hidden;
+}
+
+.photo-show img {
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+
+.photo-tags {
+    width: 100%;
+    height: auto;
+    margin: 0.5em 0.3em 0 0.3em;
+    border-radius: 10px;
+}
+
+.tags-list {
+    color: #019f4c;
+    word-break: keep-all;
+}
+
+.tags-btn {
+    margin: 0.4em 0.1em;
+    color: #009e4c;
+    font-size: 1.3em;
+    vertical-align: middle;
+}
+
+.tag-name {
+    color: #fff;
+    font-size: 0.9em;
+    border: 1px solid #009d4c;
+    background-color: #009d4c;
+    padding: 0.3em;
+    border-radius: 10px;
+    vertical-align: text-bottom;
+}
+
+.keyword {
+    font-size: 0.8em;
+    vertical-align: text-bottom;
+    font-weight: bold;
+}
+
+.photo-comment {
+    width: 100%;
+    height: 6em;
+    background-color: #eceaea;
+}
+
+.show-title {
+    border-radius: 5px 5px 0 0;
+    border: 1px solid #009e4c;
+    border-bottom: 1px dotted #009e4c;
+    background-color: #f7f7f7;
+    ;
+}
+
+.fa-camera {
+    margin: 0.9px;
+    margin: 0.3em;
+}
+
+.show-info {
+    height: auto;
+    border: 1px solid #009d4c;
+    border-top: none;
+    padding: 0.3em;
+}
+
+
+/** ユーザー情報 **/
+
+.post-show-user {
+    width: 100%;
+    height: auto;
+    border: 1px solid #009d4c;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-left: 1em;
+    /* border-left: 5px solid #009d4c; */
+    display: inline-table;
+}
+
+.post-user-info img {
+    width: 4em;
+    height: 4em;
+    background-color: aquamarine;
+    border-radius: 50%;
+    display: block;
+    margin-left: 1em;
+    /* margin-right: auto; */
+    margin-top: 1em;
+    margin-bottom: 1em;
+    object-fit: cover;
+}
+
+
+/* .post-show-name {
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 10em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px dotted #009e4c;
+} */
+
+.post-show-text {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: auto;
+    width: 15em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    color: #333333;
+    font-size: 0.9em;
+}
+
+.post-user-info {
+    display: flex;
+    border-bottom: 1px dotted #009d4c;
+}
+
+.post-user-name {
+    font-weight: bold;
+}
+
+.post-user-pre {
+    font-size: 0.8em;
+    color: #989898;
+    /* line-height: inherit; */
+}
+
+.test {
+    margin-top: 1.7em;
+    margin-left: 1em;
+    line-height: 1.2em;
+}
+
+.user-other-post img {
+    width: 4em;
+    height: 4em;
+    display: block;
+    padding-left: 0.45em;
+    padding-bottom: 0.5em;
+    object-fit: cover;
+    box-sizing: content-box;
+}
+
+.user-other-post {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em 0 0.5em 0;
 }

@@ -1,0 +1,59 @@
+<%= render "shared/header" %>
+<div class="show-wrapper">
+    <div class="photo-show-wrap">
+
+      <div class="photo-show">
+      <div class="photo-show-box">
+        <%= image_tag @photo.image ,class:"item-box-img" %>
+      </div>
+      <%# いいね %>
+        <%# <span class="like">いいね機能 %>
+          <%# ライクボタン押してない時 %>
+          <%# <span class="fa fa-heart like-btn-unlike"></span> %>
+          <%# ライクボタン押した時で分岐 %>
+          <%# <span class="fa fa-heart like-btn"></span> %>
+          <%# <span class="like-sum">35</span>いいね合計数 %>
+        <%# </span> %>
+      <%# いいね %>
+        <div class="photo-tags">
+        <span class="tags-list">
+        <span class="fa fa-leaf tags-btn"></span>
+
+                <span class="keyword">キーワード</span>
+              <% @photo.tags.each do |tag| %>
+                <span class="tag-name"><%=tag.tag_name%></strong></span>
+              <%end%>
+        </span>
+        </div>
+
+        <div class="show-title">
+            <span class="fa fa-camera tags-btn"></span><%= @photo.title %><%# 投稿者名表示 %>
+            <span class="post-date"><%= @photo.created_at.strftime("%Y/%m/%d") %></span><%# 投稿日付表示 %>
+          </div>
+          <p class="show-info">
+
+          <%= safe_join(@photo.text.split("\n"), tag(:br)) %>
+          </p>
+      </div>
+
+
+<div class="post-show-user">
+        <div class="post-user-info">
+          <p><%= image_tag @photo.user.avatar %></p>
+          <p class="test"><span class="post-user-name"><%= @photo.user.name %></span><br>
+          <span class="post-user-pre"><%= @photo.user.prefecture.name %></span></p>
+        </div>
+        <%# <p class="post-show-text">
+        <%= safe_join(@photo.user.text.split("\n"), tag(:br)) %>
+      </p>
+      <p class="user-other-post">
+      <% @photos.each do |photo| %>
+        <span><%= image_tag photo.image %></span>
+       <%end%>
+      </p>
+       </div>
+
+
+       
+  </div>
+</div>

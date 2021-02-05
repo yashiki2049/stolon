@@ -37,19 +37,18 @@
     
     <div class="field">
       <ul>
-        <li class="input-label"><%= f.label :都道府県 %> <span class="arbitrary">任意</span></li>
+        <li class="input-label"><%= f.label :都道府県 %> <span class="indispensable">必須</span></li>
         <li><%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class: "input-default"}) %></li>
       </ul>
     </div>
+        <div class="field">
 
-    <div class="field">
-      <ul>
-        <li class="input-label"><%= f.label :性別 %> <span class="indispensable">必須</span></li>
-      <li class="radio"><label><%= f.radio_button :gender, :male %>男性</label></li>
-      <li class="radio"><label><%= f.radio_button :gender, :female %>女性</label></li>
-      <li class="radio"><label><%= f.radio_button :gender, :other %>その他</label></li>
-      <li class="radio"><label><%= f.radio_button :gender, :na %>無回答</label></li>
-      </ul>
+    <ul>
+      <li class="input-label">写真 <span class="indispensable">必須</span></li>
+      <li><%= f.label :avatar, "写真をアップロード" , class: "image_input_btn" %></li>
+      <li><%= f.file_field :avatar , class: "image_form" %></li>
+    </ul>
+        <div class="user-avatar-img"></div>
     </div>
 
     <div class="field">

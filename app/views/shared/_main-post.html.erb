@@ -3,16 +3,10 @@
 <% @photos.each do |photo| %>
     <div class="photo-post-card"><%# ---- 写真投稿ここから ---- %>
       <div class="photo-box">
-      <%= link_to image_tag(photo.image, class:"photo-image"), "/" %><%# 投稿画像を表示 %>
+        <%= link_to image_tag(photo.image, class:"photo-image"), photo_path(photo.id) %><%# 投稿画像を表示 %>
       </div>
       <div class="photo-info">
-        <span class="like"><%# いいね機能 %>
-          <%# ライクボタン押してない時 %>
-          <%# <span class="fa fa-heart like-btn-unlike"></span> %>
-          <%# ライクボタン押した時で分岐 %>
-          <span class="fa fa-heart like-btn"></span>
-          <span class="like-sum">35</span><%# いいね合計数 %>
-        </span>
+
         <span class="name">
           <a href="/">
             <span><%= photo.user.name %></span><%# 投稿者名表示 %>
@@ -34,22 +28,14 @@
             <i class="fas fa-calendar-check"></i>ラナンキュラスを育てます<%# 投稿タイトルを表示 %>
           </div>
           <div class="record-text">
-            <p class="record-start-date">育成開始日：2020年9月16日</p><%# 投稿育成開始日を表示 %>
             去年のランキュラスが芽を出したので観察を始めようと思います！<%# 投稿コメントを表示 %>
           </div>
-          <div class="record-like">
-            <span class="like">
-            <%# ライクボタン押してない時 %>
-            <%# <span class="fa fa-heart like-btn-unlike"></span> %>
-            <%# ライクボタン押した時で分岐 %>
-            <span class="fa fa-heart like-btn"></span>
-            <span class="like-sum">25</span>
-            </span>
+          <p class="record-start-date">育成開始日：2020年9月16日</p><%# 投稿育成開始日を表示 %>
             <span class="name">
               <a href="/"><span>みか</span><%#= tweet.user.nickname %></a><%# 投稿名を表示 %>
               <span class="post-date">2020/09/20</span><%# 投稿日を表示 %>
             </span>
-          </div>
+          
         </div>
     </div>
 

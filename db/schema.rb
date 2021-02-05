@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2021_01_17_093115) do
   end
 
   create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", null: false
+    t.string "tag_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -67,7 +67,6 @@ ActiveRecord::Schema.define(version: 2021_01_17_093115) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "name", null: false
     t.integer "prefecture_id"
-    t.string "gender", null: false
     t.text "text", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
