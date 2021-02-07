@@ -1,19 +1,19 @@
 # README
 
 # 今後の改善箇所
-##写真を複数枚投稿できるようにする
-##コメント機能の実装
-##検索機能の実装
-##マイページ機能の実装
+1.写真を複数枚投稿できるようにする
+2.コメント機能の実装
+3.検索機能の実装
+4.マイページ機能の実装
 
 # 開発環境
-##Ruby 2.6.5
-##Rails 6.0.0
-##HTML/CSS
-##Javascript
-##MySQL
-##AWS
-##VScode
+Ruby 2.6.5
+Rails 6.0.0
+HTML/CSS
+Javascript
+MySQL
+AWS
+VScode
 
 # Stolonテーブル設計
 
