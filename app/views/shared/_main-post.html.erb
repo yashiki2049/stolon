@@ -22,7 +22,9 @@
   <div class="record-posts"><%# ---- 育成記録ここから ---- %>
 
     <div class="record-post-card">
-      <%= link_to image_tag("test_img1.jpg", class:"record-image"), "/" %><%# 投稿画像を表示 %>
+      <a href="/">
+        <img class="record-image" src="http://test_img1.jpg">
+      </a><%# 投稿画像を表示 %>
           <div class="record-info">
             <div class="record-title">
             <i class="fas fa-calendar-check"></i>ラナンキュラスを育てます<%# 投稿タイトルを表示 %>
