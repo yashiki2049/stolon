@@ -1,4 +1,21 @@
-# README# Stolonテーブル設計
+# README
+
+# 今後の改善箇所
+1.写真を複数枚投稿できるようにする
+2.コメント機能の実装
+3.検索機能の実装
+4.マイページ機能の実装
+
+# 開発環境
+Ruby 2.6.5
+Rails 6.0.0
+HTML/CSS
+Javascript
+MySQL
+AWS
+VScode
+
+# Stolonテーブル設計
 
 ## users テーブル (ユーザー管理)
 
@@ -12,10 +29,8 @@
 
 ### Association
 
-- has_many :records
 - has_many :photos
-- has_many :photo_likes
-- has_many :record_likes
+- belongs_to :prefecture
 
 ## photos テーブル （投稿写真を管理）
 
@@ -27,35 +42,8 @@
 ### Association
 
 - belongs_to :user
-- has_one :photo_likes
-- has_one :post_tags
-
-## records テーブル (育成記録概要を管理)
-
-| Column        | Type       | Options     |
-| ------------- | ---------- | ----------  |
-| title         | string     | null: false |
-| genre_id      | integer    | null: false |
-| text          | text       | null: false |
-| start_date    | date       | null: false |
-
-### Association
-
-- belongs_to :user
-- has_one :record_likes
-- has_one :post_tags
-
-## record_contents テーブル (育成記録を管理)
-
-| Column             | Type       | Options     |
-| ------------------ | ---------- | ----------- |
-| shoot_date         | date       | null: false |
-| title              | string     | null: false |
-| text               | text       | null: false |
-
-### Association
-
-- belongs_to :record
+- has_many :photo_tags
+- has_many :tags
 
 ## tags テーブル (タグを管理)
 
@@ -65,41 +53,17 @@
 
 ### Association
 
-- belongs_to :post_tags
+- has_many :photo_tags
+- has_many :photos
 
 ## post_tags テーブル (タグと投稿の関連付けを管理)
 
 | Column             | Type       | Options                       |
 | ------------------ | ---------- | ----------------------------- |
 | photo              | references | null: false, foreign_key: tru |
-| record             | references | null: false, foreign_key: tru |
+| tag                | references | null: false, foreign_key: tru |
 
 ### Association
 
-- belongs_to :photo
-- belongs_to :record
-- has_one :tags
-
-## photo_likes テーブル (写真のいいねを管理)
-
-| Column             | Type       | Options                       |
-| ------------------ | ---------- | ----------------------------- |
-| user               | references | null: false, foreign_key: tru |
-| photo              | references | null: false, foreign_key: tru |
-
-### Association
-
-- belongs_to :user
-- belongs_to :photo
-
-## record_likes テーブル (育成記録のいいねを管理)
-
-| Column             | Type       | Options                       |
-| ------------------ | ---------- | ----------------------------- |
-| user               | references | null: false, foreign_key: tru |
-| record              | references | null: false, foreign_key: tru |
-
-### Association
-
-- belongs_to :user
-- belongs_to :record
+  belongs_to :photo
+  belongs_to :tag
