@@ -1,6 +1,8 @@
 <header class='top-header'>
   <div class="header-contents">
-      <%= link_to image_tag("stolon_logo.png", class:"stolon-logo"), "/" %>
+      <a href="/">
+        <img class="stolon-logo" src="http://stolon_logo.png">
+      </a>
       <ul class="header-menu">
       <% if user_signed_in? %>
       <%= current_user.name %> さん
