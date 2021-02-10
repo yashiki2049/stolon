@@ -1,13 +1,18 @@
 <%= render "shared/header" %>
 <div class="intro-wrap">
   <div class="top-intro">
+
+
   <div class="intro-image">
-    <div class="intro-img">①撮影しよう<br>育てている植物を撮影<br>外出先で綺麗な景色を撮影<br>名前を知りたい植物を撮影</div>
-    <div class="intro-img">②投稿してみよう<br>みんなにみてもらいたい！<br>知らない植物の名前を教えてもらいたい！</div>
-    <div class="intro-img">③交流してみよう<br>好きな投稿にいいねして交流しよう！<br>分からないことはアドバイスしあおう！</div>
+<%= image_tag "use-img.png" %><%# 投稿画像を表示 %><%# 投稿画像を表示 %>
   </div>
-  <p>お気に入りのグリーンを投稿しよう！</p>
-    <a hlef="">新規登録</a>
+    <p>お気に入りのグリーンを<br>投稿しよう！<br><br>
+    <% if user_signed_in? %>
+      <%= link_to '写真投稿', new_photo_path , class: "top-new-post" %></li>
+    <% else %>
+      <%= link_to '新規登録', new_user_registration_path , class: "top-sign-up" %></li>
+    <% end %>
+    </p>
   </div>
 </div>
 
@@ -16,9 +21,9 @@
   <p class="top-new-list">
   新着フォト
   </p>
-  <p class="top-new-list">
+  <%# <p class="top-new-list">
   新着育成記録
-  </p>
+  </p> %>
 </div>
   <%= render "shared/main-post" %>
 </div>
